@@ -158,7 +158,21 @@ opacity:0.15;
 z-index:-1;
 animation:moveStars 120s linear infinite;
 }
+.hero h1{
+font-size:4rem;
+color:#00e5ff;
+text-shadow:0 0 20px #00e5ff;
+animation: glow 2s infinite alternate;
+}
 
+@keyframes glow{
+from{
+text-shadow:0 0 10px #00e5ff;
+}
+to{
+text-shadow:0 0 20px #00e5ff,0 0 40px #7b2cff;
+}
+}
 @keyframes moveStars{
 from{transform:translateY(0);}
 to{transform:translateY(-1000px);}
@@ -180,8 +194,21 @@ to{transform:translateY(-1000px);}
         <li><a href="#">Contact</a></li>
     </ul>
 </nav>
-<section class="hero">
-<h1>Nova AI Pilot</h1>
+<section class="hero"><div class="ai-orb"></div>
+<h1>Nova AI Pilot</h1>.ai-orb{
+width:140px;
+height:140px;
+border-radius:50%;
+background:radial-gradient(circle,#00e5ff,#7b2cff);
+box-shadow:0 0 60px #00e5ff;
+margin-bottom:30px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
 
 <p>
 The Future Starts Here.
