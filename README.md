@@ -62,10 +62,19 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:
-radial-gradient(circle at center,#16213e,#050816);
+padding-top:80px;
+background:radial-gradient(circle at center,#16213e,#050816);
+}
+.btn{
+text-decoration:none;
+display:inline-block;
+transition:0.3s;
 }
 
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px #00e5ff;
+}
 .hero h1{
 font-size:4rem;
 color:#00e5ff;
