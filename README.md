@@ -133,10 +133,11 @@ Hello. I'm here to help you build your future.
 AI + Human Together Building The Future.
 </p>
 
-<button class="btn">Start AI</button>
+<a href="#vision" class="btn">Start AI</a>
 </section>
 
 <section>
+<section id="vision">
 <h2 class="section-title">AI Human Vision</h2>
 
 <div class="grid">
