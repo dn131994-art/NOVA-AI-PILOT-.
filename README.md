@@ -12,7 +12,43 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,8,22,.75);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:1000;
+}
 
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#00e5ff;
+text-shadow:0 0 10px #00e5ff;
+}
 body{
 background:#050816;
 color:white;
@@ -124,7 +160,17 @@ to{transform:translateY(-1000px);}
 <body>
 
 <div class="stars"></div>
+<nav class="navbar">
+    <div class="logo">🚀 Nova AI Pilot</div>
 
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 <section class="hero">
 <h1>Nova AI Pilot</h1>
 
