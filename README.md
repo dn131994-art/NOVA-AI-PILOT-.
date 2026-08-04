@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universe AI Pilot</title>
+<title>Nova AI Pilot</title>
 
 <style>
 *{
@@ -126,11 +126,11 @@ to{transform:translateY(-1000px);}
 <div class="stars"></div>
 
 <section class="hero">
-<h1>Universe AI Pilot</h1>
+<h1>Nova AI Pilot</h1>
 
 <p>
-Hello. I'm here to help you build your future.
-AI + Human Together Building The Future.
+The Future Starts Here.
+AI + Human. Building the Future Together.
 </p>
 
 <a href="ai.html" class="btn">Start AI</a>
