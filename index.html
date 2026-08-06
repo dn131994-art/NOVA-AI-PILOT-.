@@ -48,7 +48,28 @@ text-align:center;
 background:
 radial-gradient(circle at center,#16213e,#050816);
 }
+.hero h1{
+font-size:60px;
+font-weight:800;
+letter-spacing:2px;
+animation:glow 2s infinite alternate;
+}
 
+@keyframes glow{
+from{
+text-shadow:0 0 10px #00e5ff;
+}
+to{
+text-shadow:0 0 30px #00e5ff,0 0 60px #7b2cff;
+}
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+line-height:1.7;
+color:#d7d7d7;
+}
 .hero h1{
 font-size:4rem;
 color:#00e5ff;
