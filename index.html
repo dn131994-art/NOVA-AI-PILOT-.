@@ -106,15 +106,22 @@ color:#dcdcdc;
 }
 
 .btn{
-margin-top:30px;
-padding:15px 35px;
-border:none;
-border-radius:30px;
-cursor:pointer;
-font-size:18px;
+display:inline-block;
+margin-top:25px;
+padding:15px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+color:#fff;
 background:linear-gradient(45deg,#00e5ff,#7b2cff);
-color:white;
-box-shadow:0 0 20px #00e5ff;
+box-shadow:0 0 25px #00e5ff;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 40px #00e5ff;
 }
 
 section{
@@ -135,17 +142,19 @@ gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.1);
-transition:0.3s;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(0,229,255,0.2);
+border-radius:25px;
+padding:30px;
+text-align:center;
+transition:0.4s;
+box-shadow:0 0 20px rgba(0,229,255,0.1);
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(0,229,255,0.5);
+transform:translateY(-15px) scale(1.03);
+box-shadow:0 0 35px rgba(0,229,255,0.6);
+border-color:#00e5ff;
 }
 
 .card h3{
