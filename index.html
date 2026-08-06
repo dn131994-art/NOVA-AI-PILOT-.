@@ -33,11 +33,25 @@ color:#00e5ff;
   </nav>
 </header>
 body{
-background:#050816;
+margin:0;
 color:white;
 overflow-x:hidden;
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#050816,#0b1d3a,#1b1464,#050816);
+background-size:400% 400%;
+animation:galaxy 15s ease infinite;
 }
-
+@keyframes galaxy{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
 .hero{
 height:100vh;
 display:flex;
