@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Business AI | Nova AI Pilot</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+min-height:100vh;
+color:white;
+background:
+radial-gradient(circle at top,#142b55,#050816 65%);
+padding:30px 20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.back{
+display:inline-block;
+color:#00e5ff;
+text-decoration:none;
+margin-bottom:40px;
+font-size:18px;
+}
+
+h1{
+text-align:center;
+font-size:48px;
+color:#00e5ff;
+text-shadow:0 0 25px #00e5ff;
+margin-bottom:15px;
+}
+
+.subtitle{
+text-align:center;
+color:#ddd;
+font-size:19px;
+margin-bottom:40px;
+}
+
+.panel{
+background:rgba(255,255,255,.07);
+border:1px solid rgba(0,229,255,.25);
+border-radius:25px;
+padding:30px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 35px rgba(0,229,255,.12);
+}
+
+label{
+display:block;
+margin-bottom:10px;
+color:#00e5ff;
+font-weight:bold;
+}
+
+textarea{
+width:100%;
+height:150px;
+resize:none;
+padding:18px;
+border-radius:15px;
+border:1px solid #24506b;
+background:#071226;
+color:white;
+font-size:16px;
+outline:none;
+}
+
+button{
+margin-top:20px;
+padding:15px 35px;
+border:0;
+border-radius:40px;
+background:linear-gradient(45deg,#00e5ff,#7b2cff);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 25px rgba(0,229,255,.5);
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.result{
+margin-top:30px;
+padding:20px;
+border-radius:18px;
+background:rgba(0,229,255,.06);
+border:1px solid rgba(0,229,255,.15);
+color:#ddd;
+line-height:1.7;
+}
+
+@media(max-width:600px){
+h1{
+font-size:36px;
+}
+
+.panel{
+padding:20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back">← Back to Nova AI Pilot</a>
+
+<h1>🤖 Business AI</h1>
+
+<p class="subtitle">
+Your AI co-pilot for business growth and strategy.
+</p>
+
+<div class="panel">
+
+<label>Tell us about your business</label>
+
+<textarea id="businessInput"
+placeholder="Example: I run a clothing business and want to increase sales..."></textarea>
+
+<button onclick="analyzeBusiness()">
+Analyze Business 🚀
+</button>
+
+<div class="result" id="result">
+Your AI business analysis will appear here.
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function analyzeBusiness(){
+
+const input=document.getElementById("businessInput").value;
+const result=document.getElementById("result");
+
+if(input.trim()===""){
+result.innerHTML="⚠️ Please enter some information about your business.";
+return;
+}
+
+result.innerHTML=
+"🧠 <b>Nova AI Pilot Analysis</b><br><br>"+
+"Business information received successfully.<br><br>"+
+"📊 Next step: identify your target customers, "+
+"analyze your current strategy, improve marketing, "+
+"and create a growth plan.<br><br>"+
+"🚀 AI Business Co-Pilot is ready.";
+
+}
+
+</script>
+
+</body>
+</html>
