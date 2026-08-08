@@ -304,11 +304,292 @@ font-size:16px;
     <a href="education.html" class="btn">Open</a>
 </div>
 
-<div class="card hidden">
-<h2>💡 Innovation Lab</h2>
-<p>Create future technologies.</p>
-<button>Open</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Innovation Lab | Nova AI Pilot</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    background:
+        radial-gradient(circle at 20% 20%,#172b5c,transparent 35%),
+        radial-gradient(circle at 80% 80%,#32145f,transparent 35%),
+        #050816;
+    padding:30px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:950px;
+    margin:auto;
+}
+
+.back{
+    display:inline-block;
+    color:#00e5ff;
+    text-decoration:none;
+    margin-bottom:40px;
+    font-size:18px;
+}
+
+.back:hover{
+    text-shadow:0 0 15px #00e5ff;
+}
+
+h1{
+    text-align:center;
+    font-size:52px;
+    color:#00e5ff;
+    text-shadow:
+        0 0 15px #00e5ff,
+        0 0 35px #7b2cff;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#d8d8d8;
+    font-size:19px;
+    line-height:1.6;
+    margin-bottom:40px;
+}
+
+.panel{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(0,229,255,.25);
+    border-radius:28px;
+    padding:35px;
+    backdrop-filter:blur(18px);
+    box-shadow:
+        0 0 35px rgba(0,229,255,.12),
+        inset 0 0 30px rgba(255,255,255,.02);
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+    color:#00e5ff;
+    font-weight:bold;
+    font-size:17px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:16px;
+    margin-bottom:22px;
+    border-radius:14px;
+    border:1px solid rgba(0,229,255,.25);
+    background:#071226;
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#00e5ff;
+    box-shadow:0 0 15px rgba(0,229,255,.25);
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button{
+    padding:16px 35px;
+    border:0;
+    border-radius:40px;
+    background:linear-gradient(45deg,#00e5ff,#7b2cff);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(0,229,255,.5);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 30px #00e5ff,
+        0 0 50px #7b2cff;
+}
+
+.result{
+    margin-top:30px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(0,229,255,.06);
+    border:1px solid rgba(0,229,255,.15);
+    color:#ddd;
+    line-height:1.8;
+}
+
+.idea{
+    margin-top:14px;
+    padding:16px;
+    border-left:3px solid #00e5ff;
+    background:rgba(255,255,255,.04);
+    border-radius:10px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:35px;
+    color:#777;
+}
+
+@media(max-width:600px){
+
+    body{
+        padding:20px 15px;
+    }
+
+    h1{
+        font-size:36px;
+    }
+
+    .panel{
+        padding:22px;
+    }
+
+    button{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back">← Back to Nova AI Pilot</a>
+
+<h1>💡 Innovation Lab</h1>
+
+<p class="subtitle">
+Turn your ideas into future possibilities with Nova AI Pilot.
+</p>
+
+<div class="panel">
+
+<label for="idea">🚀 Your Innovation Idea</label>
+
+<textarea
+id="idea"
+placeholder="Example: I want to create an AI platform that helps small businesses grow..."
+></textarea>
+
+<label for="category">🧠 Innovation Category</label>
+
+<select id="category">
+<option>Artificial Intelligence</option>
+<option>Business</option>
+<option>Education</option>
+<option>Technology</option>
+<option>Environment</option>
+<option>Healthcare</option>
+<option>Other</option>
+</select>
+
+<button onclick="generateIdea()">
+Develop My Idea 🚀
+</button>
+
+<div class="result" id="result">
+💡 Your innovation roadmap will appear here.
 </div>
+
+</div>
+
+<div class="footer">
+© 2026 Nova AI Pilot • Innovation Lab
+</div>
+
+</div>
+
+<script>
+
+function generateIdea(){
+
+    const idea =
+        document.getElementById("idea").value.trim();
+
+    const category =
+        document.getElementById("category").value;
+
+    const result =
+        document.getElementById("result");
+
+    if(idea === ""){
+
+        result.innerHTML =
+        "⚠️ Please enter your innovation idea first.";
+
+        return;
+    }
+
+    result.innerHTML =
+
+    "🧠 <b>Nova AI Innovation Analysis</b><br><br>" +
+
+    "💡 <b>Your Idea:</b><br>" +
+    idea +
+    "<br><br>" +
+
+    "🔬 <b>Category:</b> " +
+    category +
+
+    "<div class='idea'>" +
+    "1️⃣ <b>Define the Problem</b><br>" +
+    "Clearly identify the real-world problem your idea will solve." +
+    "</div>" +
+
+    "<div class='idea'>" +
+    "2️⃣ <b>Identify Users</b><br>" +
+    "Find the people or businesses who will benefit from your solution." +
+    "</div>" +
+
+    "<div class='idea'>" +
+    "3️⃣ <b>Create a Prototype</b><br>" +
+    "Build a simple first version and test the core idea." +
+    "</div>" +
+
+    "<div class='idea'>" +
+    "4️⃣ <b>Test & Improve</b><br>" +
+    "Collect feedback and continuously improve the product." +
+    "</div>" +
+
+    "<div class='idea'>" +
+    "5️⃣ <b>Launch</b><br>" +
+    "Turn the successful prototype into a real product." +
+    "</div>" +
+
+    "<br>🚀 <b>Next Goal:</b> Turn your concept into a working prototype.";
+
+}
+
+</script>
+
+</body>
+</html>
 
 <div class="card hidden">
 <h2>👤 Personal AI</h2>
