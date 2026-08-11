@@ -1,1 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Personal AI | Nova AI Pilot</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+min-height:100vh;
+color:white;
+padding:30px 20px;
+background:
+radial-gradient(circle at 20% 20%,#162b55,transparent 35%),
+radial-gradient(circle at 80% 80%,#35145c,transparent 35%),
+#050816;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+}
+
+.back{
+display:inline-block;
+color:#00e5ff;
+text-decoration:none;
+font-size:18px;
+margin-bottom:40px;
+}
+
+h1{
+text-align:center;
+font-size:52px;
+color:#00e5ff;
+text-shadow:0 0 20px #00e5ff,0 0 40px #7b2cff;
+margin-bottom:15px;
+}
+
+.subtitle{
+text-align:center;
+color:#ddd;
+font-size:19px;
+line-height:1.6;
+margin-bottom:40px;
+}
+
+.panel{
+background:rgba(255,255,255,.07);
+border:1px solid rgba(0,229,255,.25);
+border-radius:28px;
+padding:35px;
+backdrop-filter:blur(18px);
+box-shadow:0 0 35px rgba(0,229,255,.12);
+}
+
+label{
+display:block;
+color:#00e5ff;
+font-weight:bold;
+margin-bottom:10px;
+font-size:17px;
+}
+
+input,textarea,select{
+width:100%;
+padding:16px;
+margin-bottom:22px;
+border-radius:14px;
+border:1px solid rgba(0,229,255,.25);
+background:#071226;
+color:white;
+font-size:16px;
+outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+border-color:#00e5ff;
+box-shadow:0 0 15px rgba(0,229,255,.25);
+}
+
+textarea{
+height:140px;
+resize:none;
+}
+
+button{
+padding:16px 35px;
+border:0;
+border-radius:40px;
+background:linear-gradient(45deg,#00e5ff,#7b2cff);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 25px rgba(0,229,255,.5);
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 35px #00e5ff;
+}
+
+.result{
+margin-top:30px;
+padding:25px;
+border-radius:20px;
+background:rgba(0,229,255,.06);
+border:1px solid rgba(0,229,255,.15);
+color:#ddd;
+line-height:1.8;
+}
+
+.goal{
+margin-top:14px;
+padding:16px;
+border-left:3px solid #00e5ff;
+background:rgba(255,255,255,.04);
+border-radius:10px;
+}
+
+.footer{
+text-align:center;
+margin-top:35px;
+color:#777;
+}
+
+@media(max-width:600px){
+
+body{
+padding:20px 15px;
+}
+
+h1{
+font-size:36px;
+}
+
+.panel{
+padding:22px;
+}
+
+button{
+width:100%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back">
+← Back to Nova AI Pilot
+</a>
+
+<h1>👤 Personal AI</h1>
+
+<p class="subtitle">
+Your personal AI companion for goals, productivity and growth.
+</p>
+
+<div class="panel">
+
+<label for="goal">
+🎯 What is your main goal?
+</label>
+
+<textarea
+id="goal"
+placeholder="Example: I want to learn coding and build my own AI website..."
+></textarea>
+
+<label for="time">
+⏱️ How much time can you give each day?
+</label>
+
+<select id="time">
+<option>30 Minutes</option>
+<option>1 Hour</option>
+<option>2 Hours</option>
+<option>3+ Hours</option>
+</select>
+
+<label for="priority">
+⭐ Your priority
+</label>
+
+<select id="priority">
+<option>Learning</option>
+<option>Career</option>
+<option>Business</option>
+<option>Productivity</option>
+<option>Personal Growth</option>
+</select>
+
+<button onclick="createRoadmap()">
+Create My Roadmap 🚀
+</button>
+
+<div class="result" id="result">
+🧠 Your personal roadmap will appear here.
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Nova AI Pilot • Personal AI
+</div>
+
+</div>
+
+<script>
+
+function createRoadmap(){
+
+const goal =
+document.getElementById("goal").value.trim();
+
+const time =
+document.getElementById("time").value;
+
+const priority =
+document.getElementById("priority").value;
+
+const result =
+document.getElementById("result");
+
+if(goal === ""){
+
+result.innerHTML =
+"⚠️ Please enter your goal first.";
+
+return;
+
+}
+
+result.innerHTML =
+
+"🧠 <b>Nova AI Personal Roadmap</b><br><br>" +
+
+"🎯 <b>Your Goal:</b><br>" +
+goal +
+"<br><br>" +
+
+"⏱️ <b>Daily Time:</b> " +
+time +
+"<br>" +
+
+"⭐ <b>Priority:</b> " +
+priority +
+
+"<div class='goal'>" +
+"1️⃣ <b>Define Your Target</b><br>" +
+"Break your main goal into clear and achievable milestones." +
+"</div>" +
+
+"<div class='goal'>" +
+"2️⃣ <b>Create a Daily Routine</b><br>" +
+"Use your available time consistently every day." +
+"</div>" +
+
+"<div class='goal'>" +
+"3️⃣ <b>Learn & Practice</b><br>" +
+"Focus on practical work instead of only collecting information." +
+"</div>" +
+
+"<div class='goal'>" +
+"4️⃣ <b>Track Progress</b><br>" +
+"Review your progress every week and improve your strategy." +
+"</div>" +
+
+"<div class='goal'>" +
+"5️⃣ <b>Build Something Real</b><br>" +
+"Turn what you learn into a real project or measurable result." +
+"</div>" +
+
+"<br>🚀 <b>Nova AI Pilot:</b> Your journey starts with one consistent step.";
+
+}
+
+</script>
+
+</body>
+</html>
