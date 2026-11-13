@@ -188,6 +188,8 @@ Your innovation roadmap will appear here.
 
 function generateIdea(){
 
+function escapeHTML(value){return String(value).replace(/[&<>"']/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","\'":"&#39;"}[ch];});}
+
 const idea=document.getElementById("idea").value;
 const category=document.getElementById("category").value;
 const result=document.getElementById("result");
@@ -206,7 +208,7 @@ result.innerHTML=
 "🧠 <b>Nova AI Innovation Analysis</b><br><br>"+
 
 "💡 <b>Your Idea:</b> "+
-idea+"<br><br>"+
+escapeHTML(idea)+"<br><br>"+
 
 "🔬 <b>Category:</b> "+
 category+"<br><br>"+
