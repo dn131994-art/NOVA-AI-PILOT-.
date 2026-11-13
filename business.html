@@ -150,27 +150,32 @@ Your AI business analysis will appear here.
 </div>
 
 <script>
-
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g,function(ch){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[ch];
+ });
+}
 function analyzeBusiness(){
-
-const input=document.getElementById("businessInput").value;
-const result=document.getElementById("result");
-
-if(input.trim()===""){
-result.innerHTML="⚠️ Please enter some information about your business.";
-return;
+ const input=document.getElementById("businessInput").value.trim();
+ const result=document.getElementById("result");
+ if(!input){
+  result.textContent="⚠️ Please enter some information about your business.";
+  return;
+ }
+ const safe=escapeHTML(input);
+ result.innerHTML=
+  "<h3 style='color:#00e5ff;margin-bottom:12px;'>🧠 Nova Business Growth Starter Plan</h3>"+
+  "<p><b>Your business:</b> "+safe+"</p>"+
+  "<p style='margin-top:14px;color:#55ffb0;'><b>Mode:</b> Demo planner — live AI is not connected yet.</p>"+
+  "<div style='margin-top:18px;line-height:1.9;'>"+
+  "<b>1. Know your customer</b><br>Write down who is most likely to buy, what they need and where they discover products.<br><br>"+
+  "<b>2. Improve your offer</b><br>Choose your best-selling product or service. Explain its main benefit clearly and make pricing easy to understand.<br><br>"+
+  "<b>3. Get more customers</b><br>Share useful photos, customer reviews and clear contact details on the channels your customers already use.<br><br>"+
+  "<b>4. Track the numbers</b><br>Record weekly enquiries, orders, total sales and expenses. Repeat what brings profitable customers.<br><br>"+
+  "<b>5. Take one action this week</b><br>Talk to five existing or potential customers and ask what would make them choose your business."+
+  "</div>"+
+  "<p style='margin-top:18px;color:#00e5ff;'><b>Next step:</b> Add your customer type, location and monthly sales target to make this starter plan more specific.</p>";
 }
-
-result.innerHTML=
-"🧠 <b>Nova AI Pilot Analysis</b><br><br>"+
-"Business information received successfully.<br><br>"+
-"📊 Next step: identify your target customers, "+
-"analyze your current strategy, improve marketing, "+
-"and create a growth plan.<br><br>"+
-"🚀 AI Business Co-Pilot is ready.";
-
-}
-
 </script>
 
 </body>
