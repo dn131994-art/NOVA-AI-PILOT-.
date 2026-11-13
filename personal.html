@@ -226,6 +226,8 @@ Create My Roadmap 🚀
 
 function createRoadmap(){
 
+function escapeHTML(value){return String(value).replace(/[&<>"']/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","\'":"&#39;"}[ch];});}
+
 const goal =
 document.getElementById("goal").value.trim();
 
@@ -252,7 +254,7 @@ result.innerHTML =
 "🧠 <b>Nova AI Personal Roadmap</b><br><br>" +
 
 "🎯 <b>Your Goal:</b><br>" +
-goal +
+escapeHTML(goal) +
 "<br><br>" +
 
 "⏱️ <b>Daily Time:</b> " +
