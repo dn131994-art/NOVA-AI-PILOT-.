@@ -132,16 +132,17 @@ Your AI co-pilot for business growth and strategy.
 
 <div class="panel">
 
-<label>Tell us about your business</label>
+<label for="businessInput">Tell us about your business</label>
 
-<textarea id="businessInput"
+<textarea id="businessInput" aria-describedby="businessHelp"
 placeholder="Example: I run a clothing business and want to increase sales..."></textarea>
+<p id="businessHelp" style="color:#999;font-size:13px;margin-top:-12px;margin-bottom:16px;">Demo mode: your entry is processed in this page only; no live AI is connected.</p>
 
-<button onclick="analyzeBusiness()">
+<button type="button" onclick="analyzeBusiness()">
 Analyze Business 🚀
 </button>
 
-<div class="result" id="result">
+<div class="result" id="result" role="status" aria-live="polite">
 Your AI business analysis will appear here.
 </div>
 
