@@ -161,6 +161,8 @@ Your personalized learning plan will appear here.
 
 function createPlan(){
 
+function escapeHTML(value){return String(value).replace(/[&<>"']/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","\'":"&#39;"}[ch];});}
+
 const topic=document.getElementById("topic").value;
 const level=document.getElementById("level").value;
 const result=document.getElementById("result");
@@ -172,7 +174,7 @@ return;
 
 result.innerHTML=
 "🧠 <b>Nova AI Learning Plan</b><br><br>"+
-"📚 Subject: "+topic+"<br>"+
+"📚 Subject: "+escapeHTML(topic)+"<br>"+
 "🎯 Level: "+level+"<br><br>"+
 "1️⃣ Understand the fundamentals<br>"+
 "2️⃣ Practice with simple examples<br>"+
