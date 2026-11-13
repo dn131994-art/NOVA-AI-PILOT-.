@@ -180,8 +180,10 @@ Your personal AI companion for goals, productivity and growth.
 
 <textarea
 id="goal"
+aria-describedby="goalHelp"
 placeholder="Example: I want to learn coding and build my own AI website..."
 ></textarea>
+<p id="goalHelp" style="color:#999;font-size:13px;margin-top:-12px;margin-bottom:16px;">Demo mode: this creates a practical starter roadmap, not live AI advice.</p>
 
 <label for="time">
 ⏱️ How much time can you give each day?
@@ -206,11 +208,11 @@ placeholder="Example: I want to learn coding and build my own AI website..."
 <option>Personal Growth</option>
 </select>
 
-<button onclick="createRoadmap()">
+<button type="button" onclick="createRoadmap()">
 Create My Roadmap 🚀
 </button>
 
-<div class="result" id="result">
+<div class="result" id="result" role="status" aria-live="polite">
 🧠 Your personal roadmap will appear here.
 </div>
 
