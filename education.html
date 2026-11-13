@@ -133,9 +133,11 @@ Your personal AI learning companion.
 
 <input
 id="topic"
+aria-describedby="topicHelp"
 type="text"
 placeholder="Example: HTML, Mathematics, English..."
 >
+<p id="topicHelp" style="color:#999;font-size:13px;margin-top:-12px;margin-bottom:16px;">Demo mode: this creates a starter study plan without a live AI connection.</p>
 
 <label>Your learning level</label>
 
@@ -145,11 +147,11 @@ placeholder="Example: HTML, Mathematics, English..."
 <option>Advanced</option>
 </select>
 
-<button onclick="createPlan()">
+<button type="button" onclick="createPlan()">
 Create Learning Plan 🚀
 </button>
 
-<div class="result" id="result">
+<div class="result" id="result" role="status" aria-live="polite">
 Your personalized learning plan will appear here.
 </div>
 
