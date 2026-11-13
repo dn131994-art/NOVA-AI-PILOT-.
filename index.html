@@ -1,721 +1,436 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universe AI Pilot</title>
+<meta name="theme-color" content="#050816">
+<meta name="description" content="Nova AI Pilot - AI and Human Together Building the Future.">
+
+<title>Nova AI Pilot | Future Starts Here</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-<header class="card hidden">
-  <div class="card hidden">🚀 Nova AI Pilot</div>
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:bold;
-transition:.3s;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+  scroll-behavior:smooth;
 }
 
-nav a:hover{
-color:#00e5ff;
-}
-  <nav>
-    <a href="#">Home</a>
-    <a href="#vision">Vision</a>
-    <a href="ai.html">AI</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
 body{
-margin:0;
-color:white;
-overflow-x:hidden;
-font-family:Arial,sans-serif;
-background:linear-gradient(-45deg,#050816,#0b1d3a,#1b1464,#050816);
-background-size:400% 400%;
-animation:galaxy 15s ease infinite;
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
 }
-@keyframes galaxy{
-0%{
-background-position:0% 50%;
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 15% 15%,#102e55,transparent 35%),
+    radial-gradient(circle at 85% 65%,#35115b,transparent 35%);
 }
-50%{
-background-position:100% 50%;
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  width:100%;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,8,22,.88);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(0,229,255,.2);
 }
-100%{
-background-position:0% 50%;
+
+.logo{
+  color:#00e5ff;
+  font-size:23px;
+  font-weight:bold;
+  text-decoration:none;
+  text-shadow:0 0 15px #00e5ff;
 }
+
+.nav-links{
+  display:flex;
+  gap:22px;
 }
+
+.nav-links a{
+  color:#ddd;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:#00e5ff;
+}
+
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:
-radial-gradient(circle at center,#16213e,#050816);
-}
-<div class="card hidden"></div>
-<div class="Card hidden"></div>
-
-<h1>Universe AI Pilot</h1>
-
-<p>AI + Human Together Building The Future</p>
-
-<a href="ai.html" class="card hidden">Start AI</a>
-.hero h1{
-font-size:60px;
-font-weight:800;
-letter-spacing:2px;
-animation:glow 2s infinite alternate;
+  min-height:85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:70px 20px;
 }
 
-@keyframes glow{
-from{
-text-shadow:0 0 10px #00e5ff;
-}
-to{
-text-shadow:0 0 30px #00e5ff,0 0 60px #7b2cff;
-}
-}
-
-.hero p{
-font-size:20px;
-max-width:700px;
-line-height:1.7;
-color:#d7d7d7;
-}
-.hero h1{
-font-size:4rem;
-color:#00e5ff;
-text-shadow:0 0 20px #00e5ff;
-}
-
-.hero p{
-margin-top:20px;
-font-size:1.2rem;
-max-width:700px;
-color:#dcdcdc;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:15px 40px;
-border-radius:50px;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-color:#fff;
-background:linear-gradient(45deg,#00e5ff,#7b2cff);
-box-shadow:0 0 25px #00e5ff;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 40px #00e5ff;
-}
-
-section{
-padding:80px 10%;
-}
-
-.section-title{
-font-size:2.5rem;
-text-align:center;
-margin-bottom:40px;
-color:#00e5ff;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:rgba(255,255,255,0.08);
-border:1px solid rgba(0,229,255,0.2);
-border-radius:25px;
-padding:30px;
-text-align:center;
-transition:0.4s;
-box-shadow:0 0 20px rgba(0,229,255,0.1);
-}
-
-.card:hover{
-transform:translateY(-15px) scale(1.03);
-box-shadow:0 0 35px rgba(0,229,255,0.6);
-border-color:#00e5ff;
-}
-
-.card h3{
-margin-bottom:15px;
-color:#00e5ff;
-}
-
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid rgba(255,255,255,0.1);
-}
-
-footer h2{
-color:#00e5ff;
-margin-bottom:10px;
-}
-
-.stars{
-position:fixed;
-width:100%;
-height:100%;
-background:
-radial-gradient(white 1px, transparent 1px);
-background-size:50px 50px;
-opacity:0.15;
-z-index:-1;
-animation:moveStars 120s linear infinite;
-}
-
-@keyframes moveStars{
-from{transform:translateY(0);}
-to{transform:translateY(-1000px);}
-}
-.ai-orb{
-width:150px;
-height:150px;
-margin:0 auto 30px;
-border-radius:50%;
-background:radial-gradient(circle,#00e5ff,#6a00ff);
-box-shadow:0 0 40px #00e5ff,
-0 0 80px #6a00ff;
-animation:float 4s ease-in-out infinite;
+.orb{
+  width:115px;
+  height:115px;
+  border-radius:50%;
+  margin-bottom:35px;
+  background:radial-gradient(circle at 30% 25%,
+    white,#00e5ff 25%,#7b2cff 65%,#090018);
+  box-shadow:0 0 35px #00e5ff,0 0 80px #7b2cff;
+  animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-0%,100%{
-transform:translateY(0) rotate(0deg);
-}
-50%{
-transform:translateY(-20px) rotate(180deg);
-}
-}
-</style>
-</head>
-
-<body>
-
-<div class="card hidden"></div>
-
-<section class="card hidden">
-<h1>Universe AI Pilot</h1>
-
-<p>
-Hello. I'm here to help you build your future.
-AI + Human Together Building The Future.
-</p>
-
-<a href="business.html" class="btn">Open</a>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universe AI Pilot - AI Dashboard</title>
-
-<style>
-body{
-margin:0;
-background:#050816;
-color:white;
-font-family:Arial,sans-serif;
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
 }
 
-header{
-padding:20px;
-background:#08142b;
-text-align:center;
-font-size:30px;
-color:#00e5ff;
-box-shadow:0 0 20px #00e5ff;
+.hero h1{
+  font-size:clamp(42px,8vw,76px);
+  color:#00e5ff;
+  text-shadow:0 0 25px #00e5ff;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:700px;
+  font-size:clamp(17px,3vw,22px);
+  line-height:1.7;
+  color:#ddd;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:16px 38px;
+  border-radius:40px;
+  background:linear-gradient(45deg,#00e5ff,#7b2cff);
+  color:white;
+  text-decoration:none;
+  font-size:19px;
+  font-weight:bold;
+  box-shadow:0 0 25px rgba(0,229,255,.5);
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 40px #00e5ff;
+}
+
+section{
+  padding:75px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:clamp(30px,5vw,42px);
+  color:#00e5ff;
+  margin-bottom:18px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:#aaa;
+  margin-bottom:40px;
+  line-height:1.7;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:24px;
 }
 
 .card{
-background:#111b36;
-padding:25px;
-border-radius:20px;
-transition:.3s;
-border:1px solid rgba(255,255,255,.1);
+  padding:30px 24px;
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  justify-content:center;
+  border-radius:25px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(0,229,255,.2);
+  backdrop-filter:blur(12px);
+  transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px cyan;
+  transform:translateY(-9px);
+  border-color:#00e5ff;
+  box-shadow:0 0 30px rgba(0,229,255,.2);
 }
 
-h2{
-color:#00e5ff;
+.card .icon{
+  font-size:43px;
+  margin-bottom:18px;
 }
 
-button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-background:#00e5ff;
-cursor:pointer;
-font-size:16px;
+.card h3{
+  font-size:23px;
+  color:#00e5ff;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#ccc;
+  line-height:1.6;
+}
+
+.card a{
+  margin-top:22px;
+  padding:12px 25px;
+  border-radius:30px;
+  background:#00cfe8;
+  color:#03101e;
+  font-weight:bold;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.card a:hover{
+  background:#7b2cff;
+  color:white;
+}
+
+.vision{
+  text-align:center;
+  max-width:850px;
+  margin:auto;
+  padding:40px;
+  border-radius:25px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(0,229,255,.2);
+}
+
+.vision h2{
+  color:#00e5ff;
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.vision p{
+  color:#ddd;
+  line-height:1.9;
+  font-size:18px;
+}
+
+footer{
+  text-align:center;
+  padding:45px 20px;
+  border-top:1px solid rgba(0,229,255,.15);
+  color:#999;
+  line-height:2;
+}
+
+footer strong{
+  color:#00e5ff;
+}
+
+@media(max-width:650px){
+  .navbar{
+    padding:16px;
+  }
+
+  .logo{
+    font-size:19px;
+  }
+
+  .nav-links{
+    gap:10px;
+  }
+
+  .nav-links a{
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:80vh;
+  }
+
+  .orb{
+    width:90px;
+    height:90px;
+  }
+
+  section{
+    padding:60px 18px;
+  }
+
+  .card{
+    min-height:210px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-🌌 Universe AI Pilot
+<!-- NAVIGATION -->
+<header class="navbar">
+
+<a href="index.html" class="logo">
+🌌 Nova AI Pilot
+</a>
+
+<nav class="nav-links">
+<a href="#vision">Vision</a>
+<a href="#modules">Modules</a>
+<a href="#about">About</a>
+</nav>
+
 </header>
 
-<div class="card hidden">
+<!-- HERO -->
+<main>
 
-<div class="card">
-<h2>🤖 Business AI</h2>
-<p>Grow your business using AI.</p>
-<button>Open</button>
-</div>
+<section class="hero">
 
-<div class="card">
-    <h3>📚 Education AI</h3>
-    <p>Learn anything with AI.</p>
-    <a href="education.html" class="btn">Open</a>
-</div>
+<div class="orb"></div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1>Nova AI Pilot</h1>
 
-<title>Innovation Lab | Nova AI Pilot</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    min-height:100vh;
-    color:white;
-    background:
-        radial-gradient(circle at 20% 20%,#172b5c,transparent 35%),
-        radial-gradient(circle at 80% 80%,#32145f,transparent 35%),
-        #050816;
-    padding:30px 20px;
-}
-
-.container{
-    width:100%;
-    max-width:950px;
-    margin:auto;
-}
-
-.back{
-    display:inline-block;
-    color:#00e5ff;
-    text-decoration:none;
-    margin-bottom:40px;
-    font-size:18px;
-}
-
-.back:hover{
-    text-shadow:0 0 15px #00e5ff;
-}
-
-h1{
-    text-align:center;
-    font-size:52px;
-    color:#00e5ff;
-    text-shadow:
-        0 0 15px #00e5ff,
-        0 0 35px #7b2cff;
-    margin-bottom:15px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#d8d8d8;
-    font-size:19px;
-    line-height:1.6;
-    margin-bottom:40px;
-}
-
-.panel{
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(0,229,255,.25);
-    border-radius:28px;
-    padding:35px;
-    backdrop-filter:blur(18px);
-    box-shadow:
-        0 0 35px rgba(0,229,255,.12),
-        inset 0 0 30px rgba(255,255,255,.02);
-}
-
-label{
-    display:block;
-    margin-bottom:10px;
-    color:#00e5ff;
-    font-weight:bold;
-    font-size:17px;
-}
-
-input,
-textarea,
-select{
-    width:100%;
-    padding:16px;
-    margin-bottom:22px;
-    border-radius:14px;
-    border:1px solid rgba(0,229,255,.25);
-    background:#071226;
-    color:white;
-    font-size:16px;
-    outline:none;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-    border-color:#00e5ff;
-    box-shadow:0 0 15px rgba(0,229,255,.25);
-}
-
-textarea{
-    height:150px;
-    resize:none;
-}
-
-button{
-    padding:16px 35px;
-    border:0;
-    border-radius:40px;
-    background:linear-gradient(45deg,#00e5ff,#7b2cff);
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    box-shadow:0 0 25px rgba(0,229,255,.5);
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.05);
-    box-shadow:
-        0 0 30px #00e5ff,
-        0 0 50px #7b2cff;
-}
-
-.result{
-    margin-top:30px;
-    padding:25px;
-    border-radius:20px;
-    background:rgba(0,229,255,.06);
-    border:1px solid rgba(0,229,255,.15);
-    color:#ddd;
-    line-height:1.8;
-}
-
-.idea{
-    margin-top:14px;
-    padding:16px;
-    border-left:3px solid #00e5ff;
-    background:rgba(255,255,255,.04);
-    border-radius:10px;
-}
-
-.footer{
-    text-align:center;
-    margin-top:35px;
-    color:#777;
-}
-
-@media(max-width:600px){
-
-    body{
-        padding:20px 15px;
-    }
-
-    h1{
-        font-size:36px;
-    }
-
-    .panel{
-        padding:22px;
-    }
-
-    button{
-        width:100%;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<a href="index.html" class="back">← Back to Nova AI Pilot</a>
-
-<h1>💡 Innovation Lab</h1>
-
-<p class="subtitle">
-Turn your ideas into future possibilities with Nova AI Pilot.
-</p>
-
-<div class="panel">
-
-<label for="idea">🚀 Your Innovation Idea</label>
-
-<textarea
-id="idea"
-placeholder="Example: I want to create an AI platform that helps small businesses grow..."
-></textarea>
-
-<label for="category">🧠 Innovation Category</label>
-
-<select id="category">
-<option>Artificial Intelligence</option>
-<option>Business</option>
-<option>Education</option>
-<option>Technology</option>
-<option>Environment</option>
-<option>Healthcare</option>
-<option>Other</option>
-</select>
-
-<button onclick="generateIdea()">
-Develop My Idea 🚀
-</button>
-
-<div class="result" id="result">
-💡 Your innovation roadmap will appear here.
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 Nova AI Pilot • Innovation Lab
-</div>
-
-</div>
-
-<script>
-
-function generateIdea(){
-
-    const idea =
-        document.getElementById("idea").value.trim();
-
-    const category =
-        document.getElementById("category").value;
-
-    const result =
-        document.getElementById("result");
-
-    if(idea === ""){
-
-        result.innerHTML =
-        "⚠️ Please enter your innovation idea first.";
-
-        return;
-    }
-
-    result.innerHTML =
-
-    "🧠 <b>Nova AI Innovation Analysis</b><br><br>" +
-
-    "💡 <b>Your Idea:</b><br>" +
-    idea +
-    "<br><br>" +
-
-    "🔬 <b>Category:</b> " +
-    category +
-
-    "<div class='idea'>" +
-    "1️⃣ <b>Define the Problem</b><br>" +
-    "Clearly identify the real-world problem your idea will solve." +
-    "</div>" +
-
-    "<div class='idea'>" +
-    "2️⃣ <b>Identify Users</b><br>" +
-    "Find the people or businesses who will benefit from your solution." +
-    "</div>" +
-
-    "<div class='idea'>" +
-    "3️⃣ <b>Create a Prototype</b><br>" +
-    "Build a simple first version and test the core idea." +
-    "</div>" +
-
-    "<div class='idea'>" +
-    "4️⃣ <b>Test & Improve</b><br>" +
-    "Collect feedback and continuously improve the product." +
-    "</div>" +
-
-    "<div class='idea'>" +
-    "5️⃣ <b>Launch</b><br>" +
-    "Turn the successful prototype into a real product." +
-    "</div>" +
-
-    "<br>🚀 <b>Next Goal:</b> Turn your concept into a working prototype.";
-
-}
-
-</script>
-
-</body>
-</html>
-
-<a href="personal.html" class="btn">Open</a>
-<h2>👤 Personal AI</h2>
-<p>Your personal AI assistant.</p>
-<button>Open</button>
-</div>
-
-</div>
-<script>
-const hiddenElements=document.querySelectorAll('.hidden');
-
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-
-hiddenElements.forEach(el=>observer.observe(el));
-</script>
-</body>
-</html>
-</section>
-
-<section>
-<h2 class="card hidden">AI Human Vision</h2>
-
-<div class="card hidden">
-
-<div class="card hidden">
-<h3>🤖 AI Collaboration</h3>
-<p>AI and Humans working together to solve problems.</p>
-</div>
-
-<div class="card hidden">
-<h3>🔒 Trust & Safety</h3>
-<p>Responsible AI with transparency and security.</p>
-</div>
-
-<div class="card hidden">
-<h3>🚀 Future Building</h3>
-<p>Create technologies that improve life and innovation.</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2 class="card hidden">Core Modules</h2>
-
-<div class="card hidden">
-
-<div class="card hidden">
-<h3>🏢 Business AI</h3>
-<p>Growth analysis, strategy planning and AI co-pilot.</p>
-</div>
-
-<div class="card hidden">
-<h3>📚 Education AI</h3>
-<p>Personal teacher and learning roadmap.</p>
-</div>
-
-<div class="card hidden">
-<h3>💡 Innovation Lab</h3>
-<p>Startup ideas, inventions and future technology.</p>
-</div>
-
-<div class="card hidden">
-<h3>👤 Personal AI</h3>
-<p>Goals, productivity and life planning assistant.</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2 class="card hidden">Universe AI Pilot</h2>
-
-<div class="card hidden">
-<h3>🌌 One AI. Infinite Possibilities.</h3>
 <p>
-Business, Education, Innovation and Personal Growth
-combined into one futuristic AI platform.
+Hello. I'm here to help you build your future.
+<br>
+AI + Human Together Building The Future.
 </p>
+
+<a href="ai.html" class="btn">
+🚀 Start AI
+</a>
+
+</section>
+
+<!-- VISION -->
+<section id="vision">
+
+<h2 class="section-title">AI Human Vision</h2>
+
+<p class="section-subtitle">
+Technology becomes more powerful when AI and humans work together.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>AI Collaboration</h3>
+<p>AI and humans working together to solve real-world problems.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔒</div>
+<h3>Trust & Safety</h3>
+<p>Responsible AI with transparency, privacy and security.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Future Building</h3>
+<p>Building useful technologies for a better future.</p>
+</div>
+
 </div>
 </section>
 
+<!-- MODULES -->
+<section id="modules">
+
+<h2 class="section-title">Our AI Modules</h2>
+
+<p class="section-subtitle">
+Four powerful directions. One connected vision.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>Business AI</h3>
+<p>Business growth, planning, strategies and innovation.</p>
+<a href="business.html">Open Business AI</a>
+</div>
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Education AI</h3>
+<p>Learning, knowledge and personalized study planning.</p>
+<a href="education.html">Open Education AI</a>
+</div>
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Innovation Lab</h3>
+<p>Creative ideas, inventions and future technologies.</p>
+<a href="innovation.html">Open Innovation Lab</a>
+</div>
+
+<div class="card">
+<div class="icon">👤</div>
+<h3>Personal AI</h3>
+<p>Personal goals, productivity and growth roadmaps.</p>
+<a href="personal.html">Open Personal AI</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="vision">
+
+<h2>🌌 One AI. Infinite Possibilities.</h2>
+
+<p>
+Nova AI Pilot is a vision for an all-in-one AI platform.
+Business, Education, Innovation and Personal Growth
+come together under one platform.
+
+Our mission is to bring AI and humans together
+to build a smarter future.
+</p>
+
+<a href="ai.html" class="btn">
+Enter AI Dashboard
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-<h2>Universe AI Pilot</h2>
-<p>AI Human — Together Building The Future</p>
+
+<strong>Nova AI Pilot</strong><br>
+
+AI + Human Together Building The Future.<br>
+
+Trust • Safety • Innovation • Growth<br>
+
+© 2026 Nova AI Pilot. All Rights Reserved.
+
 </footer>
 
 </body>
 </html>
-.navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.25);
-backdrop-filter:blur(12px);
-z-index:999;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#00e5ff;
-text-shadow:0 0 15px #00e5ff;
-}
-
-.hero{
-padding-top:90px;
-}
-.hidden{
-opacity:0;
-transform:translateY(60px);
-transition:all .8s ease;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
