@@ -153,8 +153,10 @@ Turn your ideas into future possibilities with AI.
 
 <textarea
 id="idea"
+aria-describedby="ideaHelp"
 placeholder="Example: I want to create an AI app that helps small businesses..."
 ></textarea>
+<p id="ideaHelp" style="color:#999;font-size:13px;margin-top:-12px;margin-bottom:16px;">Demo mode: use this tool to structure your idea; it does not verify feasibility or provide live AI output.</p>
 
 <label>Innovation Category</label>
 
@@ -170,11 +172,11 @@ placeholder="Example: I want to create an AI app that helps small businesses..."
 
 </select>
 
-<button onclick="generateIdea()">
+<button type="button" onclick="generateIdea()">
 Develop My Idea 🚀
 </button>
 
-<div class="result" id="result">
+<div class="result" id="result" role="status" aria-live="polite">
 
 Your innovation roadmap will appear here.
 
